@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entities.CodesEntity" table="CODES" schema="PUBLIC" catalog="DCDB">
+        <id name="code">
+            <column name="CODE" sql-type="varchar(100)" length="100"/>
+        </id>
+        <property name="usagesLeft">
+            <column name="USAGES_LEFT" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="dc">
+            <column name="DC" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="dd">
+            <column name="DD" sql-type="integer" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

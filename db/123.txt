@@ -1,0 +1,15 @@
+  <property name="hibernate.connection.username">admin</property>
+      <property name="hibernate.connection.password">ACIDmors655365MORSacid</property>
+
+      <property name="hibernate.hbm2ddl.auto">update</property>
+
+      <property name="connection.pool_size">1000</property>
+
+      <property name="dialect">
+        org.hibernate.dialect.H2Dialect
+      </property>
+
+
+      @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+

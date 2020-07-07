@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entities.AccountsEntity" table="ACCOUNTS" schema="PUBLIC" catalog="DCDB">
+        <id name="address">
+            <column name="ADDRESS" sql-type="varchar(100)" length="100"/>
+        </id>
+        <property name="secret">
+            <column name="SECRET" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="id">
+            <column name="ID" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="lastLogin">
+            <column name="LAST_LOGIN" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="accountLastUpdate">
+            <column name="ACCOUNT_LAST_UPDATE" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="dc">
+            <column name="DC" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="dd">
+            <column name="DD" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="record">
+            <column name="RECORD" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="ap">
+            <column name="AP" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="op">
+            <column name="OP" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="killMin">
+            <column name="KILL_MIN" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="killMax">
+            <column name="KILL_MAX" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="hackMin">
+            <column name="HACK_MIN" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="hackMax">
+            <column name="HACK_MAX" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="hackBounty">
+            <column name="HACK_BOUNTY" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="opBounty">
+            <column name="OP_BOUNTY" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="lotteryTickets">
+            <column name="LOTTERY_TICKETS" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="historyLastUpdate">
+            <column name="HISTORY_LAST_UPDATE" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="mailLastUpdate">
+            <column name="MAIL_LAST_UPDATE" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="history">
+            <column name="HISTORY" sql-type="longvarchar(10000)" length="10000" not-null="true"/>
+        </property>
+        <property name="mail">
+            <column name="MAIL" sql-type="longvarchar(10000)" length="10000" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
